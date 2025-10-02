@@ -14,7 +14,7 @@ END_VAR
       <ST><![CDATA[
 IF bStart THEN
     iCounter := iCounter + 1;
-    rTemperature := rTemperature + 0.05;
+    rTemperature := rTemperature + 0.1;
 END_IF
 
 IF rTemperature > 30.0 THEN
