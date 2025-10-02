@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="MAIN" Id="{c61b1abb-271f-4af8-bb84-09a656ce1d2d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bStart : BOOL := FALSE;
+    bStop : BOOL := FALSE;
+    bAlarm : BOOL := FALSE;
+    iCounter : INT := 0;
+    rTemperature : REAL := 20.0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+IF bStart THEN
+    iCounter := iCounter + 1;
+    rTemperature := rTemperature + 0.05;
+END_IF
+
+IF rTemperature > 30.0 THEN
+    bAlarm := TRUE;
+END_IF
+
+IF bStop THEN
+    bStart := FALSE;
+    rTemperature := 20.0;
+    bAlarm := FALSE;
+    iCounter := 0;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
