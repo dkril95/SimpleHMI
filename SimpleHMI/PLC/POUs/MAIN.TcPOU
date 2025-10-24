@@ -7,7 +7,7 @@ VAR
     bStop : BOOL := FALSE;
     bAlarm : BOOL := FALSE;
     iCounter : INT := 0;
-    rTemperature : REAL := 20.0;
+    rTemperature : REAL := 30.0;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -17,13 +17,13 @@ IF bStart THEN
     rTemperature := rTemperature + 0.1;
 END_IF
 
-IF rTemperature > 30.0 THEN
+IF rTemperature > 40.0 THEN
     bAlarm := TRUE;
 END_IF
 
 IF bStop THEN
     bStart := FALSE;
-    rTemperature := 20.0;
+    rTemperature := 30.0;
     bAlarm := FALSE;
     iCounter := 0;
 END_IF]]></ST>
