@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="MAIN" Id="{c61b1abb-271f-4af8-bb84-09a656ce1d2d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+    iCounter : UDINT := 0;
+    bIncrease : BOOL := FALSE;
+    rTemperature : REAL := 22.5;
+    tCycle : TON;
+    nSeed : INT := 0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// Increase counter by button from HMI
+IF bIncrease THEN
+    iCounter := iCounter + 1;
+    bIncrease := FALSE; 
+END_IF
+
+// Simulation of temperature
+tCycle(IN := TRUE, PT := T#500MS);
+
+IF tCycle.Q THEN
+    tCycle(IN := FALSE);
+    nSeed := nSeed + 1;
+    rTemperature := 22.0 + SIN(REAL_TO_LREAL(nSeed) / 5.0) * 2.0;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
