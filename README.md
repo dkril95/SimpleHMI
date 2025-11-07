@@ -9,12 +9,11 @@
 
 <p align="center">
   <a href="#-program-description">🧠 Program Description</a> •
-  <a href="#-program-description">🎯 Purpose</a> •
+  <a href="#-purpose">🎯 Purpose</a> •
   <a href="#-project-structure">📂 Project Structure</a> •
   <a href="#️-requirements">⚙️ Requirements</a> •
-  <a href="#-plc-configuration">🧩 Run PLC</a> •
+  <a href="#-run-plc">🧩 Run PLC</a> •
   <a href="#-running-the-hmi-application">🚀 Run HMI</a> •
-  <a href="#-communication-overview">🔌 Communication</a> •
 
 </p>
 
@@ -22,8 +21,7 @@
 
 ## 🧠 Program Description
 
-This project demonstrates a simple yet functional integration between a **Beckhoff TwinCAT 3 PLC** and a **C# WPF-based HMI (Human Machine Interface)** using the **ADS communication protocol**.  
-It is designed as an educational and practical example of how to exchange data in real time between an industrial controller and a PC-based application.
+This project demonstrates a simple yet functional integration between a **Beckhoff TwinCAT 3 PLC** and a **C# WPF-based HMI (Human Machine Interface)** using the **ADS communication protocol**. It is designed as an educational and practical example of how to exchange data in real time between an industrial controller and a PC-based application.
 
 ### 🔧 How it works
 
