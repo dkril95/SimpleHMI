@@ -10,7 +10,7 @@
 <p align="center">
   <a href="#-program-description">🧠 Program Description</a> •
   <a href="#-purpose">🎯 Purpose</a> •
-  <a href="#-project-structure">📂 Project Structure</a> •
+  <a href="#-project-structure">🗂️ Project Structure</a> •
   <a href="#️-requirements">⚙️ Requirements</a> •
   <a href="#-run-plc">🧩 Run PLC</a> •
   <a href="#-running-the-hmi-application">🚀 Run HMI</a> •
