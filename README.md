@@ -21,7 +21,7 @@
 
 ## 🧠 Program Description
 
-This project demonstrates a simple yet functional integration between a **Beckhoff TwinCAT 3 PLC** and a **C# WPF-based HMI (Human Machine Interface)** using the **ADS communication protocol**. It is designed as an educational and practical example of how to exchange data in real time between an industrial controller and a PC-based application.
+This project demonstrates a simple functional integration between a **Beckhoff TwinCAT 3 PLC** and a **C# WPF-based HMI (Human Machine Interface)** using the **ADS communication protocol**. It is designed as an educational and practical example of how to exchange data in real time between an industrial controller and a PC-based application.
 
 ### 🔧 How it works
 
@@ -50,6 +50,7 @@ The purpose of this demo is to:
 - Serve as a **foundation for building more complex HMIs**, such as production dashboards, data loggers, or SCADA-like interfaces.  
 - Provide a **clean and modern WPF UI template** for developers working with Beckhoff controllers.
 
+---
 
 ## 🗂️ Project Structure
 
