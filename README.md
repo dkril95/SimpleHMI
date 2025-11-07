@@ -28,13 +28,9 @@ It simulates industrial data exchange such as counters and temperature values, v
 ## 🗂️ Project Structure
 
 SimpleHMI/  
-├── .git/ - Git repository  
-├── .vs/ - Visual Studio environment files  
 ├── C#/  
 │ ├── BeckhoffHMI.sln - Visual Studio (.NET/WPF) solution  
 │ └── BeckhoffHMI_WPF/  
-│ ├── bin/ - Build output  
-│ ├── obj/ - Intermediate build files  
 │ ├── App.xaml - WPF application definition  
 │ ├── App.xaml.cs - Application startup logic  
 │ ├── AssemblyInfo.cs - Assembly metadata  
