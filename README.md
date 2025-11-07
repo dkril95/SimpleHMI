@@ -41,15 +41,10 @@ SimpleHMI/
 ├── PLC/  
 │ ├── Beckhoff_PLC.sln - TwinCAT 3 solution file  
 │ └── Beckhoff_PLC/  
-│ ├── .vs/  
-│ ├── _Boot/  
-│ ├── _Config/  
 │ ├── PLC/ - PLC source (MAIN program, FBs, etc.)  
 │ ├── Beckhoff_PLC.~u - TwinCAT user data  
 │ ├── Beckhoff_PLC.bak - Backup file  
 │ ├── Beckhoff_PLC.tsproj - TwinCAT PLC project  
-│ ├── Beckhoff_PLC.tsproj.bak - Project backup  
-│ └── TrialLicense.tclrs - TwinCAT license file  
 │  
 └── .gitignore - Git ignore rules  
 
