@@ -8,6 +8,8 @@
 ---
 
 <p align="center">
+  <a href="#-program-description">🧠 Program Description</a> •
+  <a href="#-program-description">🎯 Purpose</a> •
   <a href="#-project-structure">📂 Project Structure</a> •
   <a href="#️-requirements">⚙️ Requirements</a> •
   <a href="#-plc-configuration">🧩 Run PLC</a> •
@@ -18,12 +20,38 @@
 
 ---
 
-## 🧩 Overview
+## 🧠 Program Description
 
-This project demonstrates how to connect a **Beckhoff TwinCAT PLC** to a **C# desktop HMI** using the **ADS protocol**.  
-It simulates industrial data exchange such as counters and temperature values, visualized in a WPF user interface.
+This project demonstrates a simple yet functional integration between a **Beckhoff TwinCAT 3 PLC** and a **C# WPF-based HMI (Human Machine Interface)** using the **ADS communication protocol**.  
+It is designed as an educational and practical example of how to exchange data in real time between an industrial controller and a PC-based application.
+
+### 🔧 How it works
+
+1. The **PLC (Beckhoff_PLC)** runs a TwinCAT 3 program that exposes process variables such as:
+   - `iCounter` — a numeric counter variable.  
+   - `rTemperature` — a simulated temperature sensor signal.
+
+2. The **HMI application (BeckhoffHMI_WPF)**, built in **C# and .NET 8**, connects to the PLC via the **Beckhoff.TwinCAT.Ads** library.
+
+3. Through ADS communication, the HMI:
+   - Reads live variable values from the PLC (counter and temperature).  
+   - Displays the current process values in a WPF interface.  
+   - Allows the user to modify values — e.g., incrementing the counter from the UI.  
+   - Provides connection status and simulated sensor visualization (color indicator, dynamic value).
+
+4. The data flow is **bi-directional**:
+   - PLC updates are reflected in real time on the HMI.  
+   - User actions in the HMI (button clicks) send data back to the PLC.  
 
 ---
+
+## 🎯 Purpose
+
+The purpose of this demo is to:
+- Illustrate **real-time industrial communication** using the **ADS protocol**.  
+- Serve as a **foundation for building more complex HMIs**, such as production dashboards, data loggers, or SCADA-like interfaces.  
+- Provide a **clean and modern WPF UI template** for developers working with Beckhoff controllers.
+
 
 ## 🗂️ Project Structure
 
@@ -65,7 +93,7 @@ SimpleHMI/
 2. Verify ADS route to your PLC target (AMS Net ID).  
 3. Activate the configuration and set the PLC to Run Mode.
 
-
+---
 
 ## 🚀 Running the HMI Application
 
@@ -73,4 +101,6 @@ SimpleHMI/
 2. Ensure the NuGet package Beckhoff.TwinCAT.Ads is restored.
 3. Update the AMS Net ID and port in MainWindow.xaml.cs if necessary:
 4. Build and run the project.
+
+
 
